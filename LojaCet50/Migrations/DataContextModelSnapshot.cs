@@ -15,37 +15,29 @@ namespace LojaCet50.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .UseIdentityColumns()
+                .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.2");
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("LojaCet50.Dados.Entidades.Produto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("Disponivel")
-                        .HasColumnType("bit");
+                    b.Property<bool>("Disponível");
 
-                    b.Property<string>("Nome")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Nome");
 
-                    b.Property<decimal>("Preco")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<decimal>("Preco");
 
-                    b.Property<double>("Stock")
-                        .HasColumnType("float");
+                    b.Property<double>("Stock");
 
-                    b.Property<DateTime>("UltimaCompra")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime>("UltimaCompra");
 
-                    b.Property<DateTime>("UltimaVenda")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime>("UltimaVenda");
 
-                    b.Property<string>("UrlDaImagem")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("UrlDaImagem");
 
                     b.HasKey("Id");
 

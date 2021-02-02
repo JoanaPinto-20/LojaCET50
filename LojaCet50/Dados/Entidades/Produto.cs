@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
 
 namespace LojaCet50.Dados.Entidades
 {
@@ -7,23 +11,23 @@ namespace LojaCet50.Dados.Entidades
     {
         public int Id { get; set; }
 
-
         public string Nome { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:C2}", ApplyFormatInEditMode = false)]
+       [DisplayFormat(DataFormatString = "{0:c2}", ApplyFormatInEditMode = false)]
+
         public decimal Preco { get; set; }
 
-        [Display(Name = "Image")]
+        [Display (Name ="Image")]
         public string UrlDaImagem { get; set; }
 
-        [Display(Name = "Última compra")]
+        [Display (Name = "Última compra")]
         public DateTime UltimaCompra { get; set; }
 
-        [Display(Name = "última venda")]
+        [Display (Name = "Última Venda")]
         public DateTime UltimaVenda { get; set; }
 
-        [Display(Name = "Disponível")]
-        public bool Disponivel { get; set; }
+
+        public bool Disponível { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public double Stock { get; set; }
